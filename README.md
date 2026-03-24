@@ -1,5 +1,3 @@
----
-
 # Lokalise XLSX Converter
 
 A lightweight, multi-threaded desktop application built with Python and PyQt6. This tool batch-converts translation data exported from Lokalise (or similar localization platforms) into a structured target XLSX format. 
