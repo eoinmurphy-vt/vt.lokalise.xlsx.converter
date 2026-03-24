@@ -221,72 +221,7 @@ class AppWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    
-    # Apply a global stylesheet to completely override Windows 10/11 native themes
-    app.setStyleSheet("""
-        /* Main Window Background */
-        QMainWindow {
-            background-color: #F3F3F3;
-        }
-        
-        /* Text Boxes (Line Edits) */
-        QLineEdit {
-            border: 1px solid #A0A0A0;
-            border-radius: 4px;
-            padding: 4px 8px;
-            background-color: #FFFFFF;
-            min-height: 22px;
-            color: #333333;
-        }
-        QLineEdit:read-only {
-            background-color: #EFEFEF;
-            color: #555555;
-        }
-
-        /* Buttons */
-        QPushButton {
-            background-color: #0078D4; /* Clean Windows Blue */
-            color: white;
-            border: 1px solid #005A9E;
-            border-radius: 4px;
-            padding: 6px 16px;
-            font-weight: bold;
-            min-height: 22px;
-        }
-        QPushButton:hover {
-            background-color: #106EBE;
-        }
-        QPushButton:pressed {
-            background-color: #005A9E;
-        }
-        QPushButton:disabled {
-            background-color: #CCCCCC;
-            border: 1px solid #AAAAAA;
-            color: #888888;
-        }
-
-        /* Progress Bar */
-        QProgressBar {
-            border: 1px solid #A0A0A0;
-            border-radius: 6px;
-            background-color: #E0E0E0;
-            text-align: center;
-            min-height: 20px; /* Forces it to be thick and visible */
-            max-height: 20px;
-        }
-        QProgressBar::chunk {
-            background-color: #107C10; /* Clean Green */
-            border-radius: 5px;
-        }
-
-        /* Labels */
-        QLabel {
-            color: #333333;
-            font-size: 12px;
-        }
-    """)
-    
+    app.setStyle("Fusion")
     window = AppWindow()
     window.show()
     sys.exit(app.exec())
-
